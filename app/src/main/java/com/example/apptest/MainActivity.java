@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     //Declarando variáveis da activity
     private Bundle bundle;
     private Button btAction;
-    private EditText text;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,16 +26,14 @@ public class MainActivity extends AppCompatActivity {
 
         //Localizando item via id.
         btAction = (Button) findViewById(R.id.btAction);
-        text = (EditText) findViewById(R.id.name);
+
 
         //Método onclick, ao clicar segue para nova activity
         btAction.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Tela2Activity.class);
-                intent.putExtra("param1", text.getText().toString());
-                startActivity(intent);
+                Intent intent1 = new Intent(getApplicationContext(), Tela2Activity.class);
+                startActivity(intent1);
             }
         });
 

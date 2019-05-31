@@ -14,12 +14,5 @@ public class Tela2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela2);
 
-        textView = (TextView)  findViewById(R.id.name);
-        Bundle extra = getIntent().getExtras();
-
-        String param = extra.getString("param1");
-
-        textView.setText(param);
-
     }
 }
